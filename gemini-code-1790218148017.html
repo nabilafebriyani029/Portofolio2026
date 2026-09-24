@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabila Febriyani Portfolio | Junior Graphic Designer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #fff8f7;
+            color: #31453a;
+        }
+        h1, h2, h3, nav > div > div:first-child {
+            font-family: 'Playfair Display', serif;
+        }
+        .text-gray-800, .text-gray-900 { color: #31453a !important; }
+        .text-gray-600, .text-gray-500 { color: #64756b !important; }
+        .text-gray-400 { color: #a88d94 !important; }
+        .text-gray-200 { color: #fff1f4 !important; }
+        .text-blue-600 { color: #d86f92 !important; }
+        .hover\:text-blue-600:hover { color: #b95478 !important; }
+        .bg-gray-50 { background-color: #fff0f2 !important; }
+        .bg-gray-100 { background-color: #f7e6e9 !important; }
+        .bg-gray-200 { background-color: #f4d7df !important; color: #704b58 !important; }
+        .bg-white { background-color: #fffdfc !important; }
+        .bg-white\/90 { background-color: rgba(255, 253, 252, 0.92) !important; }
+        .bg-blue-50 { background-color: #fce7ee !important; }
+        .bg-blue-100 { background-color: #dcead9 !important; }
+        .bg-blue-600 { background-color: #d86f92 !important; }
+        .border-gray-100 { border-color: #f0d7dc !important; }
+        .border-gray-200 { border-color: #efcbd4 !important; }
+        .border-white { border-color: #fffdfc !important; }
+        .border-t { border-color: #f0d7dc !important; }
+        .shadow-lg, .shadow-xl { box-shadow: 0 18px 45px rgba(117, 76, 88, 0.12) !important; }
+        .image-overlay { background: linear-gradient(to top, rgba(49, 69, 58, 0.88), rgba(49, 69, 58, 0)); }
+        footer { background-color: #31453a !important; color: #f9dce4 !important; }
+        #projectModal { background-color: rgba(49, 69, 58, 0.78) !important; }
+        .hover\:text-red-500:hover { color: #d86f92 !important; }
+        .hover\:shadow-xl:hover { box-shadow: 0 18px 45px rgba(216, 111, 146, 0.2) !important; }
+        nav { border-bottom: 1px solid rgba(239, 203, 212, 0.7); }
+        header { background: radial-gradient(circle at 12% 18%, #ffe2e9 0, transparent 28%), radial-gradient(circle at 88% 8%, #e4f0df 0, transparent 25%); }
+        #gallery .group { aspect-ratio: 3 / 2; }
+        #gallery .group > img:first-child { height: 100%; }
+        @media (max-width: 640px) {
+            h1 { line-height: 1.15; }
+        }
+        /* Modal Animation */
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 300ms, transform 300ms;
+        }
+        .modal-leave {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .modal-leave-active {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 300ms, transform 300ms;
+        }
+        .image-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-40">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight">Nabila Febriyani</div>
+            <div class="space-x-6 hidden md:flex font-medium text-sm text-gray-600">
+                <a href="#profile" class="hover:text-blue-600 transition">Profile</a>
+                <a href="#gallery" class="hover:text-blue-600 transition">Gallery</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Profile -->
+    <header id="profile" class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Hello, I'm Nabila Febriyani</h1>
+            <h2 class="text-2xl text-blue-600 font-semibold mb-6">Graphic Designer</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+                Creative and detail-oriented Graphic Designer with proven experience in digital content, publishing, and illustration. Recognized as a multiple contest-winning designer on 99designs, delivering high-quality book covers and visual assets for international clients.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+                <span class="bg-gray-200 px-4 py-2 rounded-full shadow-sm">Adobe Photoshop</span>
+                <span class="bg-gray-200 px-4 py-2 rounded-full shadow-sm">Adobe Illustrator</span>
+                <span class="bg-gray-200 px-4 py-2 rounded-full shadow-sm">Canva</span>
+                <span class="bg-gray-200 px-4 py-2 rounded-full shadow-sm">Affinity Designer</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Gallery -->
+    <section id="gallery" class="py-20 px-4 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Portfolio Gallery</h2>
+            <p class="text-center text-gray-500 mb-12">Click on each project to view details and specific images.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="group relative cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white" onclick="openModal('wakaf')">
+                    <img src="wakaf (1).png" alt="Wakaf Al-Bahjah" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <img src="Logogram_Page 3.png" alt="Wakaf Al-Bahjah logogram" class="mb-3 h-14 w-14 object-contain">
+                        <h3 class="text-white font-bold text-xl">Wakaf Al-Bahjah</h3>
+                        <p class="text-gray-200 text-sm mt-1">Click to view details</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white" onclick="openModal('99designs')">
+                    <img src="Untitled design (8).png" alt="99designs" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <img src="1e0c500690f342f2dbe1b1da9804561b29a75ae7.png" alt="99designs logogram" class="mb-3 h-14 w-14 object-contain mix-blend-screen">
+                        <h3 class="text-white font-bold text-xl">99designs</h3>
+                        <p class="text-gray-200 text-sm mt-1">Click to view details</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group relative cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white" onclick="openModal('peduli')">
+                    <img src="al bahjah peduli.png" alt="Al-Bahjah Peduli" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <img src="Logo Secondary_Page 6.png" alt="Al-Bahjah Peduli logogram" class="mb-3 h-14 w-14 object-contain mix-blend-screen">
+                        <h3 class="text-white font-bold text-xl">Al-Bahjah Peduli</h3>
+                        <p class="text-gray-200 text-sm mt-1">Click to view details</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white" onclick="openModal('mixue')">
+                    <img src="Untitled design (9).png" alt="Mixue" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <img src="footer-logo.6838208.png" alt="Mixue logogram" class="mb-3 h-12 w-auto max-w-full self-start object-contain">
+                        <h3 class="text-white font-bold text-xl">Mixue Sultan Agung</h3>
+                        <p class="text-gray-200 text-sm mt-1">Click to view details</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="group relative cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white" onclick="openModal('unsfintech')">
+                    <img src="Untitled design (7).png" alt="UNS Fintech Center" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <img src="Asset-2@4x-1024x836.png" alt="UNS Fintech Center logo" class="mb-3 h-12 w-auto max-w-full self-start object-contain">
+                        <h3 class="text-white font-bold text-xl">UNS Fintech Center</h3>
+                        <p class="text-gray-200 text-sm mt-1">Click to view details</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="group relative cursor-pointer rounded-2xl overflow-hidden shadow-lg bg-white" onclick="openModal('lovrinz')">
+                    <img src="thumbnail.png" alt="LovRinz" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <img src="images.png" alt="LovRinz logo" class="mb-3 h-12 w-auto max-w-[180px] self-start object-contain">
+                        <h3 class="text-white font-bold text-xl">LovRinz Publishing</h3>
+                        <p class="text-gray-200 text-sm mt-1">Click to view details</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience (Alternating Timeline) -->
+    <section id="experience" class="py-20 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Work Experience</h2>
+            
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Center Vertical Line -->
+                <div class="absolute left-[24px] md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-blue-100 rounded-full"></div>
+
+                <!-- ITEM 1 (LEFT on Desktop) -->
+                <div class="relative flex justify-between items-center w-full mb-12 group">
+                    <div class="w-[calc(100%-4rem)] ml-auto md:ml-0 md:w-[45%] bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow z-10">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Graphic Designer</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">05/2025 - Present</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-600 mb-3">Wakaf Al-Bahjah, Cirebon</h4>
+                        <ul class="list-disc list-outside ml-5 text-gray-600 space-y-1.5 text-sm leading-relaxed">
+                            <li>Designed 20+ monthly visual assets for Instagram, TikTok, and Facebook to support digital campaigns.</li>
+                            <li>Collaborated with Customer Service and Program teams to translate ideas into compelling visual content.</li>
+                            <li>Produced short-form video content to increase audience engagement.</li>
+                            <li>Developed custom visual materials based on internal needs.</li>
+                        </ul>
+                    </div>
+                    <!-- Center Dot -->
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white z-20 top-8 md:top-1/2 shadow"></div>
+                    <!-- Empty Space for Desktop -->
+                    <div class="hidden md:block w-[45%]"></div>
+                </div>
+
+                <!-- ITEM 2 (RIGHT on Desktop) -->
+                <div class="relative flex justify-between items-center w-full mb-12 group">
+                    <div class="hidden md:block w-[45%]"></div>
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white z-20 top-8 md:top-1/2 shadow"></div>
+                    <div class="w-[calc(100%-4rem)] ml-auto md:ml-0 md:w-[45%] bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow z-10">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Graphic Designer (Part-time)</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">07/2025 - 12/2025</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-600 mb-3">Al-Bahjah Peduli</h4>
+                        <ul class="list-disc list-outside ml-5 text-gray-600 space-y-1.5 text-sm leading-relaxed">
+                            <li>Created daily social media content based on briefs from Social Media team.</li>
+                            <li>Ensured visual consistency across all digital platforms.</li>
+                            <li>Collaborated with media team to improve content quality and engagement.</li>
+                            <li>Prepared weekly reports to track content output and performance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 (LEFT on Desktop) -->
+                <div class="relative flex justify-between items-center w-full mb-12 group">
+                    <div class="w-[calc(100%-4rem)] ml-auto md:ml-0 md:w-[45%] bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow z-10">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Freelance Graphic Designer</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">02/2024 - Present</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-600 mb-3">99designs</h4>
+                        <ul class="list-disc list-outside ml-5 text-gray-600 space-y-1.5 text-sm leading-relaxed">
+                            <li>Recognized as a winner in multiple international design contests, competing with global designers.</li>
+                            <li>Delivered high-quality, client-focused designs under tight deadlines and competitive environments.</li>
+                            <li>Selected winning projects include book covers and podcast artwork for various international authors.</li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white z-20 top-8 md:top-1/2 shadow"></div>
+                    <div class="hidden md:block w-[45%]"></div>
+                </div>
+
+                <!-- ITEM 4 (RIGHT on Desktop) -->
+                <div class="relative flex justify-between items-center w-full mb-12 group">
+                    <div class="hidden md:block w-[45%]"></div>
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white z-20 top-8 md:top-1/2 shadow"></div>
+                    <div class="w-[calc(100%-4rem)] ml-auto md:ml-0 md:w-[45%] bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow z-10">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Freelance Graphic Designer</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">05/2023 - 07/2023</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-600 mb-3">Mixue Sultan Agung</h4>
+                        <ul class="list-disc list-outside ml-5 text-gray-600 space-y-1.5 text-sm leading-relaxed">
+                            <li>Designed promotional Instagram feed and story content to support brand visibility and engagement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITEM 5 (LEFT on Desktop) -->
+                <div class="relative flex justify-between items-center w-full mb-12 group">
+                    <div class="w-[calc(100%-4rem)] ml-auto md:ml-0 md:w-[45%] bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow z-10">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Freelance Graphic Designer</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">01/2023 - 05/2023</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-600 mb-3">Lovrinz Publishing</h4>
+                        <ul class="list-disc list-outside ml-5 text-gray-600 space-y-1.5 text-sm leading-relaxed">
+                            <li>Designed book covers for novels and non-fiction titles in collaboration with editorial team.</li>
+                            <li>Created layout designs using provided templates for publishing production.</li>
+                            <li>Produced promotional materials (flyers) to support book marketing campaigns.</li>
+                        </ul>
+                    </div>
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white z-20 top-8 md:top-1/2 shadow"></div>
+                    <div class="hidden md:block w-[45%]"></div>
+                </div>
+
+                <!-- ITEM 6 (RIGHT on Desktop - Combined UNS Fintech Center Roles) -->
+                <div class="relative flex justify-between items-center w-full group">
+                    <div class="hidden md:block w-[45%]"></div>
+                    <div class="absolute left-[24px] md:left-1/2 transform -translate-x-1/2 md:-translate-y-1/2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white z-20 top-8 md:top-1/2 shadow"></div>
+                    <div class="w-[calc(100%-4rem)] ml-auto md:ml-0 md:w-[45%] bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow z-10">
+                        <!-- Graphic Designer Role -->
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Graphic Designer Intern</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">08/2020 - 06/2021</span>
+                        </div>
+                        <h4 class="text-lg font-medium text-gray-600 mb-3">UNS Fintech Center, Surakarta</h4>
+                        <ul class="list-disc list-outside ml-5 text-gray-600 space-y-1.5 text-sm leading-relaxed mb-6">
+                            <li>Collaborated with the UNS Fintech Center content team and copywriters.</li>
+                            <li>Created feed and Instagram story designs for UNS Fintech Center.</li>
+                            <li>Ensured visual consistency for feed and Instagram story designs.</li>
+                            <li>Designed stand-by mode visuals for webinar events.</li>
+                        </ul>
+
+                        <!-- Enumerator Role -->
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2 border-t pt-4">
+                            <h3 class="text-xl font-bold text-gray-900">Junior Enumerator</h3>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">08/2020 - 10/2020</span>
+                        </div>
+                        <ul class="list-disc list-outside ml-5 text-gray-600 space-y-1.5 text-sm leading-relaxed">
+                            <li>Conducted survey research on "The Effectiveness of the People's Business Credit (KUR) Program in Improving Financial Inclusion".</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <p>&copy; 2026 Nabila Febriyani. All rights reserved.</p>
+        <p class="text-sm mt-2">Mundu, Cirebon | nabilafebriyani029@gmail.com | +6289621414079</p>
+    </footer>
+
+    <!-- MODAL / POP-UP -->
+    <div id="projectModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-gray-900/80 backdrop-blur-sm px-4">
+        <div id="modalContent" class="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform transition-all modal-enter shadow-2xl">
+            <!-- Modal Header -->
+            <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center z-10">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">Project Title</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 transition focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="p-6 md:p-8">
+                <p id="modalDesc" class="text-gray-600 mb-8 leading-relaxed text-lg">
+                    Project description will appear here.
+                </p>
+
+                <h4 class="font-semibold text-gray-900 mb-4">Project Details / Previews:</h4>
+                <div id="modalGallery" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Images will be injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Projects Database
+        const projectsData = {
+            'wakaf': {
+                title: "Wakaf Al-Bahjah",
+                description: "A project focusing on monthly visual assets for Wakaf Al-Bahjah's digital campaigns. Includes designs for Instagram posters, TikTok, and Facebook content, as well as customized materials like WhatsApp Broadcast templates, created in collaboration with the Customer Service and Program teams.",
+                images: [
+                    "Oktober_2025_(3) (1).png",
+                    "November_(24) (1).png",
+                    "april 2026 (7).png",
+                    "Desember_2025_(51)tes.png"
+                ]
+            },
+            '99designs': {
+                title: "99designs - Winning Projects",
+                description: "A collection of book and podcast cover designs that successfully won international contests on 99designs. Selected winning projects include 'The Daily Quote', 'Corporate Finance', 'Effortless Estate Planning', 'Python Playground for Kids', and the 'The Media-First Startup' podcast cover.",
+                images: [
+                    "Phyton Playground.jpg",
+                    "Effortless Estate Planning-6.jpg",
+                    "home sweet home-101.png",
+                    "corporate finance past present and future-02-rgb.jpg"
+                ]
+            },
+            'peduli': {
+                title: "Al-Bahjah Peduli",
+                description: "Daily social media content design for Al-Bahjah Peduli. This project highlights visual consistency across digital platforms and aims to improve audience engagement through compelling visuals, accompanied by weekly performance reports.",
+                images: [
+                    "(Buat Banyak 1) november 2025 bulk design program (8).png",
+                    "ab-2.png",
+                    "Desember (31) (1).png",
+                    "Desember (53).png"
+                ]
+            },
+            'mixue': {
+                title: "Mixue Sultan Agung",
+                description: "Digital promotional materials for Mixue Sultan Agung. This project involves creating cheerful and engaging layout designs for Instagram Feeds and Stories to boost brand visibility on social media.",
+                images: [
+                    "mixue_promo grand opening_ copy-2.png",
+                    "mixue_Creamy mango boba.png",
+                    "0.4 mixue_Strawberry Lucky Sundae.png",
+                    "0.4 mixue_peach with oolong tea.png",
+                    "0.4 mixue_Brown Sugar Pearl Milk Tea.png",
+                    "03. mixue_Hawaiian fruit tea.png"
+                ]
+            },
+            'lovrinz': {
+                title: "LovRinz Publishing",
+                description: "Book cover design projects for novels and non-fiction titles, in collaboration with the LovRinz Publishing editorial team. The work also includes layout designs based on publisher templates and promotional flyers for marketing campaigns.",
+                images: [
+                    "You Can If You Say I Can - AyeMaye - ODOA.jpg",
+                    "Mockup Catatan Si Pengeja.png",
+                    "Aku dan Masa Tuamu.jpg",
+                    "I Love Math and I Love You.jpg"
+                ]
+            },
+            'unsfintech': {
+                title: "UNS Fintech Center",
+                description: "Graphic design internship project at the Center for Fintech and Banking (UNS Fintech Center). The role involved collaborating with the content team and copywriters to design Instagram feeds and stories, maintaining strict visual consistency, and creating stand-by mode visuals for various webinar events.",
+                images: [
+                    "01.png",
+                    "02.png",
+                    "03.png",
+                    "04.png"
+                ]
+            },
+        };
+
+        const modal = document.getElementById('projectModal');
+        const modalContent = document.getElementById('modalContent');
+
+        function openModal(projectId) {
+            const data = projectsData[projectId];
+            
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalDesc').innerText = data.description;
+            
+            const galleryContainer = document.getElementById('modalGallery');
+            galleryContainer.innerHTML = ''; 
+            
+            [...new Set(data.images)].forEach(imgUrl => {
+                const imgElement = `
+                    <div class="rounded-lg overflow-hidden shadow-sm border border-gray-100">
+                        <img src="${imgUrl}" alt="${data.title}" class="w-full h-auto object-cover hover:scale-105 transition duration-300">
+                    </div>
+                `;
+                galleryContainer.innerHTML += imgElement;
+            });
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('modal-enter');
+                modalContent.classList.add('modal-enter-active');
+            }, 10);
+
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modalContent.classList.remove('modal-enter-active');
+            modalContent.classList.add('modal-leave-active');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.classList.remove('modal-leave-active');
+                modalContent.classList.add('modal-enter');
+                document.body.style.overflow = 'auto'; 
+            }, 300);
+        }
+
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
